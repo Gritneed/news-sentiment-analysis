@@ -3,3 +3,8 @@ venv/
 node_modules/
 .DS_Store
 .ipynb_checkpoints/
+venv/
+venv311/
+frontend/node_modules/
+.DS_Store
+.ipynb_checkpoints/
