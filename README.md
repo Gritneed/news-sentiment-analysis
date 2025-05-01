@@ -40,7 +40,59 @@ news-sentiment-analysis/
 ├── README.md
 └── requirements-dev.txt
 
-📊 Sentiment Classification Report:
+## 🔧 Setup Instructions
+
+### 🐍 Backend Setup (Flask API)
+
+1. Create and activate a virtual environment:
+
+   python3.10 -m venv tfenv
+   source tfenv/bin/activate
+
+2. Install dependencies:
+
+pip install -r requirements.txt
+
+3. Create a .env file in the project root with your News API key:
+
+NEWS_API_KEY=your_api_key_here
+
+4. Run the Flask server:
+
+python backend/app.py
+
+You should see output like:
+
+DEBUG: NEWS_API_KEY = your_api_key_here
+* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+🌐 Frontend Setup (React App)
+
+1. Navigate to the frontend folder:
+
+cd frontend
+
+2. Install packages:
+
+npm install
+
+3. Start the development server:
+
+npm start
+
+The React app should open at:
+
+http://localhost:3000/
+
+🧪 Notes
+Python version used: 3.10
+TensorFlow for Mac (Apple Silicon): tensorflow-macos
+Do not include .env or tfenv/ in your Git or submission zip.
+For model evaluation, see the 📊 Model Evaluation section below.
+
+📊 Model Evaluation
+
+Sentiment Classification Report:
               precision    recall  f1-score   support
 
     negative       1.00      1.00      1.00         1
