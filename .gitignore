@@ -1,6 +1,7 @@
 # Virtual environments
 venv/
 venv311/
+tfenv/
 
 # Node.js dependencies
 node_modules/
