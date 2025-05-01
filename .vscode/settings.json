@@ -1,0 +1,5 @@
+{
+    "editor.formatOnSave": true,
+    "python.sortImports.args": ["--profile", "black"],
+    "python.sortImports.path": "isort"
+  }  

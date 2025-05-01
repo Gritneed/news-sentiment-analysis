@@ -1,13 +1,20 @@
-node_modules/
-venv/
-node_modules/
-.DS_Store
-.ipynb_checkpoints/
+# Virtual environments
 venv/
 venv311/
+
+# Node.js dependencies
+node_modules/
 frontend/node_modules/
-.DS_Store
-.ipynb_checkpoints/
-venv311/
-frontend/node_modules/
+
+# Python cache and compiled files
 __pycache__/
+*.pyc
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# macOS system files
+.DS_Store
+
+# Environment configuration
+.env

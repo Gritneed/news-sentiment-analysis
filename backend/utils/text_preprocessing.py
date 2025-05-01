@@ -1,22 +1,35 @@
 import re
+from typing import List
+
+import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
-import nltk
 
-# Only run the downloads the first time:
+# Optional: run these once
 # nltk.download('punkt')
 # nltk.download('stopwords')
 
-def preprocess_text(text):
-    text = text.lower()  # Convert to lowercase
-    text = re.sub(r'[^\w\s]', '', text)  # Remove punctuation
-    tokens = word_tokenize(text)  # Tokenize text
-    stop_words = set(stopwords.words('english'))  # Get stopwords
-    tokens = [token for token in tokens if token not in stop_words]  # Remove stopwords
-    
-    return ' '.join(tokens)  # Convert list back to a string ✅ FIX
+
+def preprocess_text(text: str) -> str:
+    """
+    Lowercase, remove punctuation, tokenize, and remove English stopwords.
+
+    Args:
+        text (str): Raw input string.
+
+    Returns:
+        str: Preprocessed text.
+    """
+    text = text.lower()
+    text = re.sub(r"[^\w\s]", "", text)
+    tokens = word_tokenize(text)
+    stop_words = set(stopwords.words("english"))
+    tokens = [token for token in tokens if token not in stop_words]
+    return " ".join(tokens)
+
 
 if __name__ == "__main__":
     sample_text = "Tesla stock plunged 15 percent on Monday, its steepest drop in five years."
     processed_result = preprocess_text(sample_text)
-    print(processed_result)
+    print(f"Original: {sample_text}")
+    print(f"Processed: {processed_result}")
